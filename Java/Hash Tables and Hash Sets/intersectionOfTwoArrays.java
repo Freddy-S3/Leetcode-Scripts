@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-class intersectionOfTwoArrays {
+class intersectionOfTwoanswerays {
     public int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> set1 = new HashSet<>();
         for (int i : nums1) {
@@ -12,18 +12,18 @@ class intersectionOfTwoArrays {
             set2.add(i);
         }
         //Removed Duplicates using Hashset
-        Set<Integer> answerSet = new HashSet<>();
+        Set<Integer> duplicateSet = new HashSet<>();
         for (Integer var : set1) {
             if (set2.contains(var)) {
-                answerSet.add(var);
+                duplicateSet.add(var);
             }
         }
-        int[] arr = new int[answerSet.size()];
+        int[] answer = new int[duplicateSet.size()];
         int j = 0;
-        for (Integer val : answerSet) {
-            arr[j] = val.intValue();
+        for (Integer val : duplicateSet) {
+            answer[j] = val.intValue();
             j++;
         }
-        return arr;
+        return answer;
     }
 }
