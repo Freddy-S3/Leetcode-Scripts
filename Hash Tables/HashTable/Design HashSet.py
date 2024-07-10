@@ -1,3 +1,5 @@
+import copy
+
 class MyHashSet:
 
     def __init__(self):
